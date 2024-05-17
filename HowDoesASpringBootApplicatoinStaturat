@@ -1,0 +1,5 @@
+Spring application has a main method class which is annotated with @springbootApplication 
+@SpringBootApplication internally has @ComponentScan @EnableAutoConfiguration @Configuration
+When we run the springboot application 
+@ComponentScan detects and registers spring managed components @Component , @Repository, @Controller, @Service, @Configuration, @RestController with application Context
+@EnableAutoConfiguration should be run after @ComponentScan since it has @ConditionalOnClass and @ConditionalOnMissingClass checks if it has already in the class path else it will create the beans for you 
